@@ -1,0 +1,29 @@
+{
+  "extends": [
+    "airbnb/hooks",
+    "prettier",
+    "prettier/react",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["react"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "sourceType": "module"
+  },
+  "settings": {
+    "react": {
+      "version": "16"
+    }
+  },
+  "rules": {
+    
+  }
+}
