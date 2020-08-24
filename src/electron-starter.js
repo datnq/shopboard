@@ -3,10 +3,7 @@ const { app, BrowserWindow } = require('electron')
 const path = require('path')
 const url = require('url')
 
-const isDevelopment =
-  !process.env.NODE_ENV ||
-  process.env.NODE_ENV === 'development' ||
-  process.env.NODE_ENV === 'dev'
+const devToolsMode = process.env.DEV_TOOLS_MODE
 
 function createWindow() {
   // Create the browser window.
@@ -29,7 +26,7 @@ function createWindow() {
   mainWindow.loadURL(startUrl)
 
   // Open the DevTools.
-  if (isDevelopment) mainWindow.webContents.openDevTools({ mode: 'detach' })
+  if (devToolsMode) mainWindow.webContents.openDevTools({ mode: devToolsMode })
 }
 
 // This method will be called when Electron has finished
