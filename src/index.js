@@ -2,11 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
+import { ThemeProvider } from 'emotion-theming'
+import { UnidataProvider } from '@datnq/unidata'
+import theme from './theme'
 import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={theme}>
+      <UnidataProvider initialData={{}}>
+        <App />
+      </UnidataProvider>
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )
